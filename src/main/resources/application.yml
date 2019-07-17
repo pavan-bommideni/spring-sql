@@ -11,6 +11,6 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://35.222.11.208/Employee?cloudSqlInstance=phrasal-catwalk-244908:us-central1:extremedemo&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false
-    username: gourab
-    password: gourab
+    url: jdbc:mysql://34.67.97.224/haha?cloudSqlInstance=deft-landing-244816:us-central1:demo-1&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false
+    username: hahauser
+    password: haha@123
