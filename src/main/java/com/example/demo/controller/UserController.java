@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.UserModel;
 import com.example.demo.service.UserService;
 
-@RestController
+@RestController("/api")
 public class UserController {
 	
 	@Autowired
