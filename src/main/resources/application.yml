@@ -1,16 +1,24 @@
 server:
   port: 9800
   
+  
 spring:
   jpa:
     hibernate:
       ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database: mysql
+  cloud:
+    gcp:
+      config:
+        enabled: true
+      credentials:
+        location: classpath:credentials.json
  
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://34.67.97.224/haha?cloudSqlInstance=deft-landing-244816:us-central1:demo-1&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false
-    username: hahauser
-    password: haha@123
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://google/my_db?cloudSqlInstance=long-state-244709:us-central1:sql-demo-instance&socketFactory=com.google.cloud.sql.mysql.SocketFactory
+    username: pavan
+    password: Test@123
