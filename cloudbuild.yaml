@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/pavan-bommideni/spring-sql']
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['package']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/deft-landing-244816/spring-sql:latest', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/deft-landing-244816/spring-sql:latest']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'spring-sql-cloudrun-gke', '--image', 'gcr.io/deft-landing-244816/spring-sql:latest', '--cluster', 'standard-cluster-1', '--cluster-location', 'us-central1-a', '--platform', 'gke', '--namespace', 'default', '--quiet']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'spring-sql-cloudrun-mgd', '--image', 'gcr.io/deft-landing-244816/spring-sql:latest', '--memory', '2Gi', '--platform', 'managed', 'allow-unauthenticated', '--region', 'us-central1', '--add-cloudsql-instances', 'deft-landing-244816:us-central1:my-sql']
