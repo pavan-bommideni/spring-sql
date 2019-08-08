@@ -1,0 +1,6 @@
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/ConnectDatabaseMysqlApplication.java
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/model/UserModel.java
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/service/UserService.java
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/respository/IUserRepository.java
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/entity/User.java
+/home/pasupuleti_sai_kalyan93/spring-sql/src/main/java/com/example/demo/controller/UserController.java
