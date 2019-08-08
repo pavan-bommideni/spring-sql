@@ -9,3 +9,6 @@ steps:
   args: ['push', 'gcr.io/deft-landing-244816/spring-sql:latest']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'spring-sql-cloudrun-gke', '--image', 'gcr.io/deft-landing-244816/spring-sql:latest', '--cluster', 'standard-cluster-1', '--cluster-location', 'us-central1-a', '--platform', 'gke', '--namespace', 'default', '--quiet']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'cloudrun-managed', '--image', 'gcr.io/deft-landing-244816/spring:latest', '--memory', '2Gi', '--platform', 'managed', '--allow-unauthenticated', '--region', 'us-central1']
+
