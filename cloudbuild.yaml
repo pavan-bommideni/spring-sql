@@ -10,6 +10,6 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'spring-sql-cloudrun-gke', '--image', 'gcr.io/deft-landing-244816/spring-sql:latest', '--cluster', 'standard-cluster-1', '--cluster-location', 'us-central1-a', '--platform', 'gke', '--namespace', 'default', '--quiet']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'enable', 'services', 'sql-component.googleapis.com']
+  args: ['beta', 'services', 'enable', 'sql-component.googleapis.com']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'spring-sql-cloudrun-mgd', '--image', 'gcr.io/deft-landing-244816/spring-sql:latest', '--memory', '2Gi', '--platform', 'managed', '--allow-unauthenticated', '--region', 'us-central1', '--service-account', '304277659328-compute@developer.gserviceaccount.com', '--set-cloudsql-instances', 'deft-landing-244816:us-central1:my-sql1', '--quiet']
